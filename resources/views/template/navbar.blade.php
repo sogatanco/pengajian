@@ -13,7 +13,7 @@
                     <a class="nav-link ml-3" href="/jadwal"><span class="fas fa-calendar-alt"></span> Jadwal</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link ml-3" href="/location"><span class="fas fa-search-location"></span> Lokasi</a>
+                    <a class="nav-link ml-3" href="/lokasi"><span class="fas fa-search-location"></span> Lokasi</a>
                 </li>   
                 <li class="nav-item">
                     <a class="nav-link ml-3" href="/about"><span class="fas fa-chess-knight"></span> About</a>

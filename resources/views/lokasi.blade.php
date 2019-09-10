@@ -7,33 +7,26 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/jadwal.css">
     <script src="js/app.js"></script>
-    <script src="js/jadwal.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALisurDb7RVJUKs2Es67Tw2jQL55LoClw"></script>
+    <script src="js/peta.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Martel|Raleway&display=swap" rel="stylesheet">
     <!-- calender -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/i18n/datepicker.en.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.css">
-    <title>Geo-Pengajian | Jadwal Pengajian</title>
+    <title>Geo-Pengajian | Lokasi Pengajian</title>
 </head>
 <body>
+    
      <!-- header -->
      @include("template/header")
 
     <!-- navbar -->
     @include("template/navbar")
 
-    <div class="home jadwal">
+    <div class="home">
         <div class="row">
 
             <div class="col-sm-8 col-12">
-                <div class="card">
-                    <div class="card-body p-0">
-                        <div id="calendar"></div>
-                    </div>
+                <div id="map">
                 </div>
             </div>
             
@@ -65,6 +58,5 @@
 			</div>
 		</div>
     </div>
-    
 </body>
 </html>
