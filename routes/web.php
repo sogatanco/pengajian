@@ -22,3 +22,7 @@ Route::get('/jadwal', function () {
 Route::get('/lokasi', function () {
     return view('lokasi');
 });
+
+Route::get('/about', function () {
+    return view('about');
+});

@@ -1369,7 +1369,7 @@
 
   .jadwal .card{
     border: 0;
-    background: transparent;
+    background: transparent !important;
   }
   h2{
     text-transform: uppercase;

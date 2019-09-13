@@ -7,16 +7,16 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link ml-3" href="/"><span class="fas fa-home"></span> Home</a>
+                    <a class="nav-link ml-3" href="{{url('/')}}"><span class="fas fa-home"></span> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link ml-3" href="/jadwal"><span class="fas fa-calendar-alt"></span> Jadwal</a>
+                    <a class="nav-link ml-3" href="{{url('/jadwal')}}"><span class="fas fa-calendar-alt"></span> Jadwal</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link ml-3" href="/lokasi"><span class="fas fa-search-location"></span> Lokasi</a>
+                    <a class="nav-link ml-3" href="{{url('/lokasi')}}"><span class="fas fa-search-location"></span> Lokasi</a>
                 </li>   
                 <li class="nav-item">
-                    <a class="nav-link ml-3" href="/about"><span class="fas fa-chess-knight"></span> About</a>
+                    <a class="nav-link ml-3" href="{{url('/about')}}"><span class="fas fa-chess-knight"></span> About</a>
                 </li>  
                 </ul>
             </div>  
