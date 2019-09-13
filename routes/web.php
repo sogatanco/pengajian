@@ -11,18 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
 
-Route::get('/jadwal', function () {
-    return view('jadwal');
-});
-
-Route::get('/lokasi', function () {
-    return view('lokasi');
-});
-
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/', 'ViewsController@home');
+Route::get('/jadwal', 'ViewsController@jadwal');
+Route::get('/lokasi', 'ViewsController@lokasi');
+Route::get('/about', 'ViewsController@about');
