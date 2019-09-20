@@ -25,7 +25,6 @@ class ViewsController extends Controller
     
     public function about()
     {
-       $user=DB::table('info')->get();
-      echo $user;
+      
     }
 }
