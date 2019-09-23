@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Jadwals;
+use App\Jadwal;
 use Illuminate\Http\Request;
 
 class JadwalsController extends Controller
@@ -14,7 +14,9 @@ class JadwalsController extends Controller
      */
     public function index()
     {
-        //
+        // 
+        $jadwals=\App\Jadwal::all();
+        return $jadwals;
     }
 
     /**
@@ -44,9 +46,9 @@ class JadwalsController extends Controller
      * @param  \App\Jadwals  $jadwals
      * @return \Illuminate\Http\Response
      */
-    public function show(Jadwals $jadwals)
+    public function show(Jadwal $jadwal)
     {
-        //
+        return $jadwal;
     }
 
     /**
@@ -55,7 +57,7 @@ class JadwalsController extends Controller
      * @param  \App\Jadwals  $jadwals
      * @return \Illuminate\Http\Response
      */
-    public function edit(Jadwals $jadwals)
+    public function edit(Jadwal $jadwal)
     {
         //
     }
@@ -78,7 +80,7 @@ class JadwalsController extends Controller
      * @param  \App\Jadwals  $jadwals
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Jadwals $jadwals)
+    public function destroy(Jadwal $jadwal)
     {
         //
     }

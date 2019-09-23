@@ -15,4 +15,6 @@
 Route::get('/', 'ViewsController@home');
 Route::get('/jadwal', 'ViewsController@jadwal');
 Route::get('/lokasi', 'ViewsController@lokasi');
-Route::get('/about', 'ViewsController@about');
+Route::get('/jdw', 'JadwalsController@index');
+Route::get('/jdw/{jadwal}', 'JadwalsController@show');
+
