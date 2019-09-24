@@ -28,11 +28,13 @@
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-body">
-					<h4 class="modal-title"><span class="event-icon"></span><span class="event-title"></span></h4>
-					<div class="event-body"></div>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    <h4 class="modal-title mb-0"><span class="event-icon"></span><span class="event-title"></span></h4>
+                    Oleh : <span class="oleh"></span>
+                    <br><br>
+                    <div class="event-body mb-4"></div>
+                    <div class="detail float-right">
+                        <a href="" class="btn btn-primary">View Detail <span class="fas fa-angle-double-right"></span></a>
+                    </div>
 				</div>
 			</div>
 		</div>

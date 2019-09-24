@@ -7,15 +7,10 @@ use Illuminate\Http\Request;
 
 class JadwalsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    // show all jadwal after now and orderby start time
     public function index()
     {
-        // 
-        $jadwals=\App\Jadwal::all();
+        $jadwals=\App\Jadwal::where('start','>=', date("Y-m-d H:i:s"))->orderBy('start', 'asc')->get();
         return $jadwals;
     }
 
@@ -40,15 +35,11 @@ class JadwalsController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Jadwals  $jadwals
-     * @return \Illuminate\Http\Response
-     */
+    // show specific jadwal
     public function show(Jadwal $jadwal)
     {
-        return $jadwal;
+        return view('detail');
+        // return $jadwal;
     }
 
     /**

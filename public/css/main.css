@@ -43,6 +43,10 @@ body{
   height: 400px;
   width: 100%;
 }
+#detailmap{
+  height: 300px;
+  width: 100%;
+}
 
 
 
@@ -84,6 +88,10 @@ body{
     }
     #map{
       height: 600px;
+      width: 100%;
+    }
+    #detailmap{
+      height: 400px;
       width: 100%;
     }
 

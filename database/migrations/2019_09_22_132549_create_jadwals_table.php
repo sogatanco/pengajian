@@ -15,13 +15,14 @@ class CreateJadwalsTable extends Migration
     {
         Schema::create('jadwals', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('pengajian', 50);
+            $table->string('title', 50);
+            $table->string('description', 500);
             $table->string('oleh', 50);
             $table->string('tempat', 50);
             $table->float('lat', 8, 5);
             $table->float('long', 8, 5);
-            $table->dateTime('mulai');
-            $table->dateTime('selesai');
+            $table->dateTime('start');
+            $table->dateTime('end');
             $table->timestamps();
         });
     }
