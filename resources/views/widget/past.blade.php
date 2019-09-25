@@ -2,8 +2,10 @@
     <h4>Terlewatkan</h4>
     <hr class="garis float-left"><br>
     @foreach($lewats as $lwt)
-        <p >{{$lwt->title}}</p>
+    <a href="jdw/{{$lwt->id}}" class="custom-card">
+        <p >{{$lwt->title}} bersama {{$lwt->oleh}}</p>
         <hr class="mb-1">
+    </a>
     @endforeach
 </div>
 

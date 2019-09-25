@@ -6,6 +6,7 @@
 @section('content')
 
     @foreach($jadwals as $jdw)
+    <a href="jdw/{{$jdw->id}}" class="custom-card">
         <div class="card mb-3 card-list">
             <div class="card-body">
                 <div class="row">
@@ -14,7 +15,7 @@
                     </div>
                     <div class="col-10">
                         <h4 class="card-title mb-0">{{$jdw->title}}</h4>
-                        <p class="card-text small mb-1 text-muted"> 
+                        <p class="card-text small mb-1 text-muted">
                             <span class="fas fa-calendar-alt"></span> {{date('l', strtotime($jdw->start))}} &nbsp&nbsp
                             <span class="fas fa-clock"></span> {{date("H:i",strtotime($jdw->start))}} &nbsp&nbsp
                             <span class="fas fa-map-marker-alt"></span> {{substr($jdw->tempat, 0, 10)}}
@@ -24,6 +25,7 @@
                 </div>
             </div>
         </div>
+    </a>
     @endforeach
     {{ $jadwals->links() }}
 @endsection
@@ -36,5 +38,3 @@
 @endsection
 
 
-
-           

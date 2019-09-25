@@ -10,7 +10,7 @@ class JadwalsController extends Controller
     // show all jadwal after now and orderby start time
     public function index()
     {
-        $jadwals=\App\Jadwal::where('start','>=', date("Y-m-d H:i:s"))->orderBy('start', 'asc')->get();
+        $jadwals=\App\Jadwal::where('end','>=', date("Y-m-d H:i:s"))->orderBy('start', 'asc')->get();
         return $jadwals;
     }
 
@@ -38,7 +38,7 @@ class JadwalsController extends Controller
     // show specific jadwal
     public function show(Jadwal $jadwal)
     {
-        return view('detail');
+        return view('detail', ['jadwal'=>$jadwal]);
         // return $jadwal;
     }
 

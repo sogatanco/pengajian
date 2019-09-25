@@ -32,7 +32,7 @@ body{
     padding-right: 10px;
 }
 .card-list{
-    border-left: 6px #4A4A4B solid !important;  
+    border-left: 6px #4A4A4B solid !important;
 }
 .garis{
     width: 10%;
@@ -46,6 +46,11 @@ body{
 #detailmap{
   height: 300px;
   width: 100%;
+}
+a.custom-card,
+a.custom-card:hover {
+  color: inherit;
+  text-decoration: none;
 }
 
 
@@ -93,6 +98,9 @@ body{
     #detailmap{
       height: 400px;
       width: 100%;
+    }
+    .icon-direct{
+        font-size: 50px!important;
     }
 
 }
