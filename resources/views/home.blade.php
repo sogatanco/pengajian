@@ -1,40 +1,23 @@
-<!-- call main layout -->
-@extends('layout.main')
-
-@section('title', 'Geo-Pengajian | Sistem Informasi Lokasi Pengajian')
+@extends('layouts.admin')
 
 @section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Dashboard</div>
 
-    @foreach($jadwals as $jdw)
-    <a href="jdw/{{$jdw->id}}" class="custom-card">
-        <div class="card mb-3 card-list">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-2  text-center align-self-center">
-                        <h3>{{date('d', strtotime($jdw->start))}}<br>{{strtoupper(date('M', strtotime($jdw->start)))}}</h3>
-                    </div>
-                    <div class="col-10">
-                        <h4 class="card-title mb-0">{{$jdw->title}}</h4>
-                        <p class="card-text small mb-1 text-muted">
-                            <span class="fas fa-calendar-alt"></span> {{date('l', strtotime($jdw->start))}} &nbsp&nbsp
-                            <span class="fas fa-clock"></span> {{date("H:i",strtotime($jdw->start))}} &nbsp&nbsp
-                            <span class="fas fa-map-marker-alt"></span> {{substr($jdw->tempat, 0, 10)}}
-                        </p>
-                        <p class="card-text">{{substr($jdw->description,0,200)}} . . . .</p>
-                    </div>
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    You are logged in!
                 </div>
             </div>
         </div>
-    </a>
-    @endforeach
-    {{ $jadwals->links() }}
+    </div>
+</div>
 @endsection
-@section('widget')
-
-    @include('widget.search')
-    @include('widget.past')
-    @include('widget.adsense')
-
-@endsection
-
-

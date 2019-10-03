@@ -1,16 +1,17 @@
 $(document).ready(function(){
-    // var uluru = {lat: -25.344, lng: 131.036};
-    // var map = new google.maps.Map(
-    //     document.getElementById('map'), {zoom: 4, center: uluru});
-    // var marker = new google.maps.Marker({position: uluru, map: map});
+  
+
     initMap();
 
     function initMap() {
+      const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+];
         var uluru= {lat: 5.174506, lng: 97.12814};
         var map = new google.maps.Map(
         document.getElementById('map'), {
-        center: {lat: 5.14506, lng: 97.15014},
-          zoom: 12,
+        center: {lat: 5.052770,  lng: 97.318209},
+          zoom: 10,
           mapTypeId: google.maps.MapTypeId.ROADMAP,
           styles: [
             {
@@ -173,7 +174,25 @@ $(document).ready(function(){
             }
           ]
         });
-        var marker = new google.maps.Marker({position: uluru, map: map});
-        
+
+        $.ajax({
+          type:'get',
+          url:'api/aktif',
+          success:function(response){
+            for(i=0;i<response.length;i++){
+              date=new Date(response[i].start);
+              tulisan=date.getDate()+' '+monthNames[date.getMonth()];
+              var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(response[i].lat,response[i].long),
+                label: { color: '#000', fontSize: '9px', text: tulisan },
+                url:response[i].id,
+                map: map});
+
+                google.maps.event.addListener(marker, 'click', function(){
+                  window.location.href=this.url;
+                })
+            }
+          }
+        });
       }
 });

@@ -7,70 +7,37 @@ use Illuminate\Http\Request;
 
 class JadwalsController extends Controller
 {
-    // show all jadwal after now and orderby start time
     public function index()
     {
-        $jadwals=\App\Jadwal::where('end','>=', date("Y-m-d H:i:s"))->orderBy('start', 'asc')->get();
-        return $jadwals;
+        return view('admin.dashboard');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
+    public function show(Jadwal $jadwal)
+    {
+        //
+    }
+
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         //
     }
 
-    // show specific jadwal
-    public function show(Jadwal $jadwal)
-    {
-        return view('detail', ['jadwal'=>$jadwal]);
-        // return $jadwal;
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Jadwals  $jadwals
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Jadwal $jadwal)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Jadwals  $jadwals
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, Jadwals $jadwals)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Jadwals  $jadwals
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Jadwal $jadwal)
     {
         //

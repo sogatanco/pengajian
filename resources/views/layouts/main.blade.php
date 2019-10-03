@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="{{url('css/app.css')}}">
     <link rel="stylesheet" href="{{url('css/main.css')}}">
     <script src="{{url('js/app.js')}}"></script>
-    
     @yield('adds')
     <link href="https://fonts.googleapis.com/css?family=Martel|Raleway&display=swap" rel="stylesheet">
     <title>@yield('title')</title>

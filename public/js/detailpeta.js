@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  
+
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       var map;
@@ -13,7 +13,7 @@ $(document).ready(function(){
       };
       map=new google.maps.Map(document.getElementById('detailmap'),option );
       var marker = new google.maps.Marker({position: dest, map: map});
-      var marker = new google.maps.Marker({position: user, map: map, icon:'../images/user.png'});
+      var marker = new google.maps.Marker({position: user, map: map, icon:'images/user.png'});
       var display =new google.maps.DirectionsRenderer({
         suppressMarkers: true
       });
@@ -23,7 +23,7 @@ $(document).ready(function(){
         var request={
           origin:user,
           destination:dest,
-          travelMode:'WALKING'
+          travelMode:'DRIVING'
         };
         serv.route(request, function(result, status){
           console.log(status);

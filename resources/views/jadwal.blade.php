@@ -1,4 +1,4 @@
-@extends('layout.main')
+@extends('layouts.main')
 
 @section('adds')
     <script src="{{url('js/jadwal.js')}}"></script>
@@ -42,6 +42,5 @@
 @endsection
 
 @section('widget')
-    @include("widget/past")
     @include("widget/adsense")
 @endsection

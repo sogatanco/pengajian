@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $.ajax({
         type:'get',
-        url:'jdw',
+        url:'api/all',
         success:function(response){
             console.log(response)
             $("#calendar").fullCalendar({
@@ -19,7 +19,7 @@ $(document).ready(function(){
                     $('.event-title').html(event.title);
                     $('.event-body').html(event.description);
                     $('.oleh').html(event.oleh);
-                    $('.detail').html(`<a href="jdw/`+event.id+`" class="btn btn-primary">View Detail <span class="fas fa-angle-double-right"></span></a>`)
+                    $('.detail').html(`<a href="`+event.id+`" class="btn btn-primary">View Detail <span class="fas fa-angle-double-right"></span></a>`)
                     $('#modal-view-event').modal();
                 }
             })
